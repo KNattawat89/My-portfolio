@@ -85,6 +85,12 @@ a{
   height: 500px
 }
 
+.headerIconxs{
+  width: 500px;
+  height: 400px;
+  margin-top: 50px;
+}
+
 
 .space{
   margin-top: 60px;
@@ -121,17 +127,16 @@ a{
   opacity: 0;
 }
 
-.scrolled{
-  transition: 1.5s;
-  opacity: 1;
-  
-}
-
 .project-bg h3{
   color: black;
   display: flex;
   justify-content: center;
   font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.project-bg p{
+  margin-bottom: 50px;
 }
 
 .project-img{
@@ -253,6 +258,7 @@ a{
 .skill{
   width: 100%;
   background: #cdcdcd;
+  opacity: 1;
 }
 
 .skill h3{
@@ -260,4 +266,93 @@ a{
   display: flex;
   justify-content: center;
   font-size: 50px;
+}
+
+.scrolled{
+  transition: 1.5s;
+  opacity: 1;
+  
+}
+
+/* skills */
+
+.skill-m{
+  margin-bottom: 50px;
+}
+
+.skill-hind{
+  opacity: 0;
+}
+
+.lang-font{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.skill-item{
+  width: 400px;
+  height: 30px;
+  border-radius: 60px;
+  border: 5px solid white;
+}
+
+.skill-item::before{
+  content: "";
+  background-color: black;
+  border-radius: 60px;
+  position: absolute;
+  width: 0px;
+  height: 30px;
+  transition: 1s ease-in-out;
+}
+
+#html::before {
+  width: 280px;
+}
+
+#css::before {
+  width: 280px;
+}
+
+#js::before {
+  width: 240px;
+}
+
+#java::before {
+  width: 160px;
+}
+
+#Bs::before {
+  width: 240px;
+}
+
+#mui::before {
+  width: 320px;
+}
+
+#react::before {
+  width: 200px;
+}
+
+.skill-img{
+  width: 50px;
+  height: 30px;
+}
+
+.font-skill{
+  position: absolute;
+  color: white;
+  font-weight: 700;
+ 
+}
+
+.font-cent{
+  text-align: center;
+}
+
+.skill-ban{
+  width: 500px;
+  height: 400px;
 }

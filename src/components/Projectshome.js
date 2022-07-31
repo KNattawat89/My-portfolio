@@ -1,4 +1,4 @@
-import { Container, Stack } from '@mui/material';
+import { Container, Grid, Stack } from '@mui/material';
 import {React, useState, useEffect} from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -85,7 +85,9 @@ const Projectshome = () => {
 
             <Stack direction="column" className={scrolled ? "scrolled project-bg" : " project-bg"}>
               <h3 className='font'>Projects</h3>
-              <Stack direction="row" spacing={4} sx={{justifyContent: "center"}}>
+              <p className='font'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              <Stack direction="row" spacing={4} display={{xs: "none", md: "flex"}} sx={{justifyContent: "center"}}>
                        
                   {
                     project.map((projects) => {
@@ -95,7 +97,20 @@ const Projectshome = () => {
                     })
                   }
                   
-                 
+            </Stack>
+
+            <Stack direction="column" spacing={4} display={{xs: "flex", md: "none"}} sx={{justifyContent: "center", alignItems: "center"}}>
+                       
+                  {
+                    project.map((projects) => {
+                      return(
+                     
+                        <Projectitem {...projects} />
+                       
+                      )
+                    })
+                  }
+                  
             </Stack>
             </Stack>
 

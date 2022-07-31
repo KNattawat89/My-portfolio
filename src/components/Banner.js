@@ -61,8 +61,12 @@ const Banner = () => {
           </Stack>
     
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} display={{xs: "none", md:"flex"}}>
         <img src={ban} className="headerIcon"/>
+        </Grid>
+
+        <Grid item xs={12} md={6} display={{xs: "flex", md:"none"}}>
+        <img src={ban} className='headerIconxs'/>
         </Grid>
       </Grid>
     </div>
