@@ -1,17 +1,18 @@
 import React from 'react';
-import Navbar from './Navbar/Navbar';
-import { Box } from '@mui/material';
-import Banner from './Banner';
-import Projectshome from './Projectshome';
-import Skills from './Skill/Skills';
-
+import { BrowserRouter as Router, Route, Routes, Redirect } from 'react-router-dom';
+import Home from '../pages/Home';
+import Project from '../pages/Project';
+import Aboutme from '../pages/Aboutme';
 const Maincomponent = () => {
   return (
     <div>
-    <Navbar/>
-    <Banner/>
-    <Projectshome  />
-    <Skills />
+      <Router>
+        <Routes>
+          <Route path="/About" element={ <Aboutme />} />
+          <Route path="/Projects" element={<Project />} />
+          <Route path="/Home" element={ <Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -1,8 +1,17 @@
 .font{ 
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: 'Kanit', sans-serif;
 }
 
+.font-navbarbrand{
+  margin: 0;
 
+}
+
+.navbarbrand{
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
 
 a{
   text-decoration: none;
@@ -16,6 +25,7 @@ a{
 
 .active{
   background-color: black;
+  height: 63px;
   color: white;
 }
 
@@ -27,18 +37,20 @@ a{
 }
 
 .Circleone:hover{
-  background-color: black;
+  /* background-color: black;
   width: 55px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50%; */
+  transform: scale(1.2);
   transition: 0.5s;
 }
 
 .Circle:hover{
-  background-color: white;
+  /* background-color: white;
   width: 55px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50%; */
+  transform: scale(1.2);
   transition: 0.5s;
 }
 
@@ -51,10 +63,11 @@ a{
 }
 
 .Square:hover{
-  background-color: black;
+  /* background-color: black;
   width: 55px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 12px; */
+  transform: scale(1.2);
   transition: 0.5s;
 }
 
@@ -66,12 +79,47 @@ a{
   height: 50px;
 }
 
+@media screen and (max-width: 450px){
+  .Square{
+    opacity: 0;
+  }
 
-/* body{
-  background: black;
-} */
+  .Circle{
+   opacity: 0;
+  }
+
+  .Circleone{
+    opacity: 0;
+  }
+
+  .Square-xs{
+    border-radius: 12px;
+    width: 45px;
+    height: 40px;
+  }
+
+  .Circle-xs{
+    border-radius: 50%;
+    width: 45px;
+    height: 40px;
+  }
+
+  .Circleone-xs{
+    border-radius: 50%;
+    width: 45px;
+    height: 40px;
+  }
+}
+
+
+/*  banner
+ */
+
 .header{
   margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Navbaritem:hover{
@@ -81,25 +129,27 @@ a{
 }
 
 .headerIcon{
-  width: 600px;
-  height: 500px
+  width: 100%;
+  height: calc(0.576 * 50vw);
 }
 
-.headerIconxs{
-  width: 500px;
-  height: 400px;
-  margin-top: 50px;
+
+@media screen and (max-width: 900px) {
+  .headerIcon{
+  height: calc(0.576 * 100vw);
+  }
 }
 
 
 .space{
   margin-top: 60px;
+  width: 100vw;
+  overflow: hidden;
   background-color: #cdcdcd;
 }
 
 .space h4, h1, p, span{
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .space span{
@@ -107,7 +157,8 @@ a{
 }
 
 .space p{
-  margin-left: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .space h1{
@@ -150,8 +201,9 @@ a{
  width: 350px;
  height: 200px;
  border-radius: 12px;
- border: 5px solid black;
+ box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
 
 
 .project-img::before{
@@ -160,14 +212,14 @@ a{
  border-radius: 12px;
  opacity: 0.90;
  position: absolute;
- width: 360px;
+ width: 350px;
  height: 0;
  z-index: 900;
  transition: 0.4s ease-in-out;
 } 
 
 .project-img:hover::before{
-  height: 210px;
+  height: 200px;
 }
 
 .project-img img:hover{
@@ -177,83 +229,60 @@ a{
 
 .project-text h4{
   color: white;
-  text-align: center;
   font-size: 35px;
+  margin-top: 35px;
 }
 
 .project-text p{
   color: white;
   font-size: 20px;
+  margin-bottom: 35px;
 }
 
 .project-text{
   position: absolute;
-  text-align: center;
   top: 0%;
-  transform: translate(90%, 0%);
+  width: 100%;
+  height: 100%;
+  text-align: center;
   opacity: 0;
   transition: 0.4s ease-in-out;
   z-index: 999;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1150px) {
+  .project-img{
+    width: 280px;
+  }
+
+  .project-img img{
+   width: 280px;
+  }
+
+  .project-img::before{
+    width: 280px;
+   } 
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 960px) {
+  .project-img{
+    width: 270px;
+  }
+
+  .project-img img{
+   width: 268px;
+  }
+
+  .project-img::before{
+    width: 268px;
+   } 
+
 }
 
 .project-img:hover > .project-text{
   opacity: 1;
 }
-
-
-/* .project-text h4{
-  color: black;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 35px;
-}
-
-.project-text p{
-  font-size: 20px;
-}
-
-.project-text{
-  position: absolute;
-  text-align: center;
-  top: 80%;
-  transform: translate(-50% -50%);
-  transition: 0.4s ease-in-out;
-  opacity: 0;
-}
-
-.project-img:hover .project-text{
-  opacity: 1;
-}
-
-.project-text:hover{
-  opacity: 1;
-  z-index: 999;
-} */
-
-/* .hind{
-  opacity: 0;
-} */
-
-
-/* .project-bg{
-  width: 100%;
-  border-radius: 48px;
-  background-color: black;
-  margin-top: 10%;
-  margin-bottom: 10%;
-} */
-
-/* .project-bg h3{
-  color: white;
-  display: flex;
-  justify-content: center;
-  font-size: 50px;
-} */
-
-/* .project img{
-  border: 10px solid white;
-  border-radius: 12px;
-}  */
 
 .skill{
   width: 100%;
@@ -285,55 +314,33 @@ a{
 }
 
 .lang-font{
-  font-size: 40px;
+  font-size: 35px;
   display: flex;
   justify-content: center;
   margin-top: 0;
 }
 
+
 .skill-item{
-  width: 400px;
+  width: 30vw;
   height: 30px;
   border-radius: 60px;
   border: 5px solid white;
 }
 
-.skill-item::before{
+@media screen and (max-width: 900px) {
+  .skill-item{
+    width: 50vw;
+  }
+}
+
+.inner-skill-item{
   content: "";
   background-color: black;
   border-radius: 60px;
-  position: absolute;
   width: 0px;
   height: 30px;
   transition: 1s ease-in-out;
-}
-
-#html::before {
-  width: 280px;
-}
-
-#css::before {
-  width: 280px;
-}
-
-#js::before {
-  width: 240px;
-}
-
-#java::before {
-  width: 160px;
-}
-
-#Bs::before {
-  width: 240px;
-}
-
-#mui::before {
-  width: 320px;
-}
-
-#react::before {
-  width: 200px;
 }
 
 .skill-img{
@@ -356,3 +363,18 @@ a{
   width: 500px;
   height: 400px;
 }
+
+.projectpage{
+  width: 100vw;
+  height: 100vh;
+  background-color: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .projectpage h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

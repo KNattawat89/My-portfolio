@@ -6,7 +6,7 @@ const Navbaritem = ({nav, active}) => {
     <div>
       <Box className={active} sx={{
         width: "85px",
-        height: "65px",
+        height: "63px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center"

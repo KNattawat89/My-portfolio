@@ -47,8 +47,8 @@ const Banner = () => {
 
   return (
     <div className="space">
-     <Grid container>
-        <Grid item xs={12} md={6} lx={4}>
+    <Stack direction={{xs: "column", md: "row"}} alignItems="center">
+        
 
           <Stack direction="column" className='header'>
           <h4>Welcome to my website and portfolio</h4> 
@@ -56,19 +56,15 @@ const Banner = () => {
           <p>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, 
             I’m focused on building accessible, human-centered products at Upstatement.
           </p>
-          <span><a href='https://github.com/KNattawat89'><Button  variant="contained" sx={{width: "100px", height: "50px", position: "static", background: "black"}}>Github</Button></a></span>
+          <span><a href='https://github.com/KNattawat89'><Button  variant="contained" sx={{width: "100px", height: "50px", position: "static", background: "black", marginBottom: "50px"}}>Github</Button></a></span>
           
           </Stack>
     
-        </Grid>
-        <Grid item xs={12} md={6} display={{xs: "none", md:"flex"}}>
+       
+       
         <img src={ban} className="headerIcon"/>
-        </Grid>
-
-        <Grid item xs={12} md={6} display={{xs: "flex", md:"none"}}>
-        <img src={ban} className='headerIconxs'/>
-        </Grid>
-      </Grid>
+        
+        </Stack>
     </div>
   );
 }
