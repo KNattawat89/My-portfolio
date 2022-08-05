@@ -10,7 +10,7 @@ const Maincomponent = () => {
         <Routes>
           <Route path="/About" element={ <Aboutme />} />
           <Route path="/Projects" element={<Project />} />
-          <Route path="/Home" element={ <Home />} />
+          <Route path="*" element={ <Home />} />
         </Routes>
       </Router>
     </div>
