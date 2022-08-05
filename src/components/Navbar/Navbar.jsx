@@ -54,7 +54,7 @@ const Navbar = () => {
         
             </Box>
 
-            <NavLink to='/Home' onClick={() => onUpdateActiveLink('home')}><Navbaritem nav="Home" active={activeLink === 'home' ? 'active font' : 'Navbaritem font'} /></NavLink>
+            <NavLink to='/' onClick={() => onUpdateActiveLink('home')}><Navbaritem nav="Home" active={activeLink === 'home' ? 'active font' : 'Navbaritem font'} /></NavLink>
             <NavLink to='/Projects' onClick={() => onUpdateActiveLink('projects')}><Navbaritem nav="Projects" active={activeLink === 'projects' ? 'active font' : 'Navbaritem font'} /></NavLink>
             <NavLink to='/About' onClick={() => onUpdateActiveLink('aboutme')}><Navbaritem nav="About me" active={activeLink === 'aboutme' ? 'active font' : 'Navbaritem font'} /></NavLink>
             </Stack>
