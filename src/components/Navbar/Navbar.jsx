@@ -48,7 +48,7 @@ const Navbar = () => {
           >
             <Stack direction="row" display={{xs: "none", md: "flex"}}>
             <Box sx={{marginLeft: "20px", marginRight: "20px", height: "60px", display: "flex", alignItems: "center"}}>
-            <Link to='/home'>
+            <Link to='/'>
                  <h2 className='font font-navbarbrand'>Nao_Night</h2>
             </Link>
         
