@@ -1,4 +1,4 @@
-import { Grid, Typography , Stack, Button, colors} from '@mui/material';
+import { Stack, Button} from '@mui/material';
 import React from 'react';
 import ban from '../assets/img/banner.png'
 import { useState, useEffect } from 'react';
@@ -62,7 +62,7 @@ const Banner = () => {
     
        
        
-        <img src={ban} className="headerIcon"/>
+        <img src={ban} className="headerIcon" alt='banner'/>
         
         </Stack>
     </div>

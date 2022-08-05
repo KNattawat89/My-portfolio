@@ -10,7 +10,7 @@ const Skillitem = ({ lang, img, per }) => {
     <div className='skill-m' ref={ref}>
       <Stack direction="row" >
         <Stack direction="column" className='font-cent' spacing={1} sx={{ marginRight: "50px", width: "50px" }}>
-          <img className='skill-img' src={img} />
+          <img className='skill-img' src={img} alt='' />
           <h4 className='font'>{lang}</h4>
         </Stack>
 

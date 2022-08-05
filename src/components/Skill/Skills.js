@@ -1,11 +1,10 @@
-import { React, useState, useEffect, useRef } from 'react';
-import { Button, Stack, Container, Grid, Box } from '@mui/material'
+import { React, useRef } from 'react';
+import { Stack, Container,Box } from '@mui/material'
 import Skillitem from './Skillitem';
-import skill from '../../assets/img/banner-skill.png';
 import useOnScreen from '../UseonScreen';
 const Skills = () => {
-  const [scrolled, setscrolled] = useState(false);
-  const [scrolled2, setscrolled2] = useState(false);
+  // const [scrolled, setscrolled] = useState(false);
+  // const [scrolled2, setscrolled2] = useState(false);
   const ref = useRef()
   const isVisible = useOnScreen(ref)
 

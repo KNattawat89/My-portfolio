@@ -1,8 +1,6 @@
-import { AppBar, Box, Stack, Typography, Menu, IconButton, MenuItem } from '@mui/material';
+import { Box, Stack, Menu, IconButton, MenuItem } from '@mui/material';
 import React from 'react';
 import Navbaritem from './Navbaritem';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import CallIcon from '@mui/icons-material/Call';
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from 'react';
@@ -101,14 +99,14 @@ const Navbar = () => {
                <a href='https://www.facebook.com/profile.php?id=100007457503353'>
                 <Box className='Circleone-xs' sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
                 <img  src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/800px-Facebook_Logo_%282019%29.png' 
-                height="40px" width="45px"/>
+                height="40px" width="45px" alt='facebook-xs'/>
                 </Box>
               </a>
 
               <a href='https://www.instagram.com/nn_nattawat/'>
                 <Box className='Square-xs' sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png'
-                  height="40px" width="45px"/>
+                  height="40px" width="45px" alt='IG-xs'/>
               </Box>
               </a>
 
@@ -130,13 +128,13 @@ const Navbar = () => {
               <a href='https://www.facebook.com/profile.php?id=100007457503353'>
                 <Box className='Circleone' sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
                 <img  src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/800px-Facebook_Logo_%282019%29.png' 
-                height="40px" width="45px"/>
+                height="40px" width="45px" alt='facebook'/>
                 </Box>
               </a>
               <a href='https://www.instagram.com/nn_nattawat/'>
                 <Box className='Square' sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png'
-                  height="40px" width="45px"/>
+                  height="40px" width="45px" alt='IG'/>
               </Box>
               </a>
               <a href='tel:0948426152'>
