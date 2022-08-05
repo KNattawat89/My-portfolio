@@ -89,11 +89,17 @@ const Navbar = () => {
               }}
             >
               <Stack direction="column" spacing={0.5} sx={{display: "flex", alignItems: "center"}}>
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                 <Link to={page}>{page}</Link>
+              
+                <MenuItem key='/' onClick={handleCloseNavMenu}>
+                 <Link to='/'>Home</Link>
                 </MenuItem>
-              ))}
+                <MenuItem key='projects' onClick={handleCloseNavMenu}>
+                 <Link to='/Projects'>Projects</Link>
+                </MenuItem>
+                <MenuItem key='about' onClick={handleCloseNavMenu}>
+                 <Link to='/About'>Aboutme</Link>
+                </MenuItem>
+            
               <Stack spacing={1}>
 
                <a href='https://www.facebook.com/profile.php?id=100007457503353'>
