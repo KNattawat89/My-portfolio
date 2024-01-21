@@ -5,7 +5,7 @@ const Projectitem = ({title, description, img}) => {
   return (
     <div>
       <Box className='project-img'>
-        <img src={img} />
+        <img src={img} alt='project'/>
         <div className='font project-text'>
            <h4>{title}</h4>
            <p>{description}</p>

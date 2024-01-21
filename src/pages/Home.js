@@ -1,19 +1,21 @@
-import React from 'react';
-import Navbar from '../components/Navbar/Navbar';
-import Banner from '../components/Banner';
-import Projectshome from '../components/projects.js/Projectshome';
-import Skills from '../components/Skill/Skills';
-import Contact from '../components/Contact';
+import React from "react";
+import Banner from "../components/Banner";
+import { Experience } from "../components/Experience/Experience";
+import { Footer } from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Skills from "../components/Skill/Skills";
+import Projectshome from "../components/projects.js/Projectshome";
 const Home = () => {
   return (
-    <div>
-       <Navbar/>
-        <Banner/>
-        <Projectshome  />
-        <Skills />
-        <Contact />
+    <div style={{ backgroundColor: "white" }}>
+      <Navbar />
+      <Banner />
+      <Projectshome />
+      <Skills />
+      <Experience/>
+      <Footer />
     </div>
   );
-}
+};
 
 export default Home;

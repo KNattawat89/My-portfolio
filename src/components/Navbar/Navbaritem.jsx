@@ -10,9 +10,8 @@ const Navbaritem = ({nav, active}) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
-
       }}>
-      <span><h3 className={active}>{nav}</h3></span>
+      <span><h3 >{nav}</h3></span>
       </Box>
     </div>
   );

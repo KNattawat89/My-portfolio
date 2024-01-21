@@ -1,8 +1,10 @@
 .font{ 
-  font-family: 'Kanit', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 .font-navbarbrand{
+  font-weight: bold;
   margin: 0;
 
 }
@@ -23,18 +25,55 @@ a{
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.vertical-line {
+  position: absolute;
+  height: 55%;
+  width: 3px;
+  background-color: #D9D9D9;
+  left: 35%;
+  transform: translateX(-50%);
+}
+.ball{
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: black;
+  border-radius: 180px;
+  left: 34%;
+}
+.present{
+  position: absolute;
+  left: 35%;
+}
+/* .navButton:hover{
+  transition: 0.8s;
+ background-color: black;
+ color: white
+}
+.navButton{
+  background-color: #D9D9D9;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+} */
 
 .active{
-  background-color: black;
- 
-  color: white;
+  color: black;
+}
+
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+}
+
+.shadowTechStack{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
 }
 
 .Circleone{
   transition: 0.5s;
   border-radius: 50%;
-  width: 55px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
+  margin: 0;
 }
 
 .Circleone:hover{
@@ -75,9 +114,8 @@ a{
 .Square{
   transition: 0.5s;
   background-color: "rgba(187,240,241,1)";
-  border-radius: 12px;
-  width: 55px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
 }
 
 @media screen and (max-width: 450px){
@@ -123,10 +161,14 @@ a{
   justify-content: center;
 }
 
-.Navbaritem:hover{
-  transition: 0.5s;
-  background-color: black;
-  color: white;
+
+.navbarItem:hover{
+  transition: 0.8s ;
+  color: black;
+}
+
+.navbarItem{
+  color: rgba(0, 0, 0, 0.25);
 }
 
 .headerIcon{
@@ -141,9 +183,17 @@ a{
   }
 }
 
+@media screen and (max-width: 700px) {
+  .imageDetail{
+  width: 340px;
+  height: 300px;
+  }
+}
+
+
 
 .space{
-  margin-top: 60px;
+  margin-top: 50px;
   width: 100vw;
   overflow: hidden;
   background-color: #cdcdcd;
@@ -174,8 +224,8 @@ a{
   transition: 0.4s ease-in-out;
   width: 100%;
   background: white;
-  margin-top: 7%;
-  margin-bottom: 10%;
+  
+ 
   opacity: 0;
 }
 
@@ -183,24 +233,25 @@ a{
   color: black;
   display: flex;
   justify-content: center;
-  font-size: 50px;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
 .project-bg p{
   margin-bottom: 50px;
+  font-weight: normal;
 }
 
 .project-img{
   position: relative;
   width: 350px;
-  height: 200px;
+  height: 250px;
 }
 
 .project-img img{
   transition: 0.4s ease-in-out;
  width: 350px;
- height: 200px;
+ height: 250px;
  border-radius: 12px;
  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -220,7 +271,7 @@ a{
 } 
 
 .project-img:hover::before{
-  height: 200px;
+  height: 250px;
 }
 
 .project-img img:hover{
@@ -230,19 +281,22 @@ a{
 
 .project-text h4{
   color: white;
-  font-size: 35px;
-  margin-top: 35px;
+  font-size: 30px;
+  margin-top: 75px;
 }
 
 .project-text p{
   color: white;
-  font-size: 20px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 35px;
 }
 
 .project-text{
   position: absolute;
   top: 0%;
+ 
   width: 100%;
   height: 100%;
   text-align: center;
@@ -287,7 +341,6 @@ a{
 
 .skill{
   width: 100%;
-  background: #cdcdcd;
   opacity: 1;
 }
 
@@ -295,7 +348,24 @@ a{
   color: black;
   display: flex;
   justify-content: center;
-  font-size: 50px;
+  font-size: 32px;
+}
+
+.skillButton {
+  background-color: #D9D9D9;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+}
+
+.skillButton:hover{
+  transition: 0.8s;
+  background-color: black;
+  color: white;
+}
+
+.skillButtonActive{
+  background-color: black;
+  color: white;
 }
 
 .scrolled{
