@@ -112,7 +112,7 @@ const Navbar = () => {
                 <MenuItem key="resume" onClick={handleCloseNavMenu}>
                   <Button
                   onClick={() => {
-                    window.open('https://drive.google.com/file/d/1yxeVnrDeCHtVGI0Nbs3xKhtoU4rFUFku/view?usp=share_link', '_blank');
+                    window.open('https://drive.google.com/file/d/1MWNW6LJXYaTezYmQYnnhY0SR4geKsGBL/view?usp=share_link', '_blank');
                   }}
                     style={{
                       backgroundColor: "#D9D9D9",
@@ -174,7 +174,7 @@ const Navbar = () => {
           >
             <Button
              onClick={() => {
-              window.open('https://drive.google.com/file/d/1yxeVnrDeCHtVGI0Nbs3xKhtoU4rFUFku/view?usp=share_link', '_blank');
+              window.open('https://drive.google.com/file/d/1MWNW6LJXYaTezYmQYnnhY0SR4geKsGBL/view?usp=share_link', '_blank');
             }}
               style={{
                 backgroundColor: "#D9D9D9",
