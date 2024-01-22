@@ -1,22 +1,42 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box, Button, IconButton, Menu, MenuItem, Stack } from "@mui/material";
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Navbaritem from "./Navbaritem";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(false);
   const location = useLocation();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const updateWindowWidth = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useLayoutEffect(() => {
+    
+    window.addEventListener('resize', updateWindowWidth);
+    
+    
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  }, []);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(true);
   };
 
   const handleCloseNavMenu = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", 
-    });
+    if (windowWidth < 450) {
+      window.scrollTo(0, 0);
+    } else{
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", 
+      });
+    }
+   
     setAnchorElNav(false);
   };
 

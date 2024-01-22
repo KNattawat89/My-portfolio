@@ -1,5 +1,5 @@
 import { Container, Grid, Stack } from '@mui/material';
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import project3 from "../assets/img/AI-home.png";
 import project1 from "../assets/img/ModLife-home.png";
@@ -10,6 +10,21 @@ import { Footer } from '../components/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import { ProjectItemBox } from '../components/Project/ProjectItemBox';
 const Project = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const updateWindowWidth = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useLayoutEffect(() => {
+    
+    window.addEventListener('resize', updateWindowWidth);
+    
+    
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  }, []);
   const projects = [
     {
       image: project1,
@@ -63,10 +78,15 @@ const Project = () => {
               return (
                 <Grid item lg={4}>
                   <NavLink to={`/Projects/${a.title}`} onClick={()=> {
-                     window.scrollTo({
-                      top: 0,
-                      behavior: "smooth", 
-                    });
+                    if (windowWidth < 450) {
+                      window.scrollTo(0,0)
+                    }else{
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth", 
+                      });
+                    }
+                   
                   }}>
                   <ProjectItemBox image={a.image} title={a.title} tag={a.tag} description={a.description}/>
                   </NavLink>
