@@ -119,7 +119,7 @@ a{
 }
 
 @media screen and (max-width: 450px){
-  .Square{
+  /* .Square{
     opacity: 0;
   }
 
@@ -129,7 +129,7 @@ a{
 
   .Circleone{
     opacity: 0;
-  }
+  } */
 
   .Square-xs{
     border-radius: 12px;
