@@ -62,7 +62,12 @@ const Project = () => {
             {projects.map((a) => {
               return (
                 <Grid item lg={4}>
-                  <NavLink to={`/Projects/${a.title}`}>
+                  <NavLink to={`/Projects/${a.title}`} onClick={()=> {
+                     window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", 
+                    });
+                  }}>
                   <ProjectItemBox image={a.image} title={a.title} tag={a.tag} description={a.description}/>
                   </NavLink>
                 </Grid>
