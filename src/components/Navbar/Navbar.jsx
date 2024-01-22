@@ -13,6 +13,10 @@ const Navbar = () => {
   };
 
   const handleCloseNavMenu = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    });
     setAnchorElNav(false);
   };
 
@@ -49,17 +53,17 @@ const Navbar = () => {
                 alignItems: "center",
               }}
             >
-              <Link to="/">
+              <Link to="/" onClick={handleCloseNavMenu}>
                 <h2 className="font-navbarbrand">Nao_Night</h2>
               </Link>
             </Box>
-            <NavLink to="/">
+            <NavLink to="/" onClick={handleCloseNavMenu}>
               <Navbaritem
                 nav="Home"
                 active={location.pathname === "/" ? "active" : "navbarItem"}
               />
             </NavLink>
-            <NavLink to="/Projects">
+            <NavLink to="/Projects" onClick={handleCloseNavMenu}>
               <Navbaritem
                 nav="Projects"
                 active={

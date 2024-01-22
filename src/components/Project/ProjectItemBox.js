@@ -2,7 +2,12 @@ import { Box, Stack } from "@mui/material";
 
 export const ProjectItemBox = ({ image, title, tag, description }) => {
   return (
-    <Box bgcolor={"#D9D9D9"} width={"310px"} borderRadius={"16px"} boxShadow={"rgba(0, 0, 0, 0.35) 0px 3px 10px"}>
+    <Box  sx={{
+        ":hover": {
+          transform: "scale(1.05)",
+          transition: "0.3s" 
+        },
+      }} bgcolor={"#D9D9D9"} width={"310px"} borderRadius={"16px"} boxShadow={"rgba(0, 0, 0, 0.35) 0px 3px 10px"}>
       <Stack className="font" spacing={1} direction={"column"}>
         <img
           src={image}
