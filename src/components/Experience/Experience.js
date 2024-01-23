@@ -21,6 +21,7 @@ export const Experience = () => {
   ];
   const ref = useRef();
   const isVisible = useOnScreen(ref);
+  console.log(isVisible);
   return (
     <div className="skill" ref={ref}>
       <Container sx={{ mb: "40px" }}>
@@ -28,7 +29,7 @@ export const Experience = () => {
           <h3 className="font">Work Experiences</h3>
         </Box>
        
-        <Timeline  sx={{
+        <Timeline className={isVisible ? " scrolled" : "skill-hind"}  sx={{
        
         [`& .${timelineOppositeContentClasses.root}`]: {
           flex: 0.55,
