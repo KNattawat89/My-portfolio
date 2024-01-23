@@ -1,4 +1,5 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator, timelineOppositeContentClasses } from "@mui/lab";
+import { Box, Container } from "@mui/material";
 import { useRef } from "react";
 import useOnScreen from "../UseonScreen";
 import { ExperienceBox } from "./ExperienceBox";
@@ -26,44 +27,85 @@ export const Experience = () => {
         <Box px={"15px"} className={isVisible ? " scrolled" : "skill-hind"}>
           <h3 className="font">Work Experiences</h3>
         </Box>
-        <Stack
-          direction={"column"}
-          spacing={5}
-          alignItems={"center"}
-          justifyContent={"center"}
-        >
-          {/* <Divider color="black" orientation="vertical"/> */}
-          {/* <div className="vertical-line"></div>
-        <div className="ball"></div> */}
-          <Stack
-            alignItems={"center"}
-            direction={"row"}
-            justifyContent={"space-around"}
-          >
-            {/* <div style={{fontSize: "20px"}}>September/2023</div> */}
-            <ExperienceBox
+       
+        <Timeline  sx={{
+       
+        [`& .${timelineOppositeContentClasses.root}`]: {
+          flex: 0.55,
+        },
+      }}>
+          <TimelineItem>
+          <TimelineOppositeContent display={{xs: "none", sm: "block"}} color="textSecondary">
+          <div className="font" style={{fontSize: "20px", color: "black"}}>September/2023</div>
+        </TimelineOppositeContent>
+          <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector/>
+        </TimelineSeparator >
+        <TimelineContent mt={{sm:3}}>
+          <Box display={{xs: "block", sm: "none"}}>
+        <div className="font" style={{fontSize: "20px", color: "black",}}>September/2023</div>
+        </Box>
+        <ExperienceBox
               company={experiences[0].title}
               role={experiences[0].role}
               description={experiences[0].description}
             />
-          </Stack>
-
-          <Stack
+          </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+          <TimelineOppositeContent  display={{xs: "none", sm: "block"}} color="textSecondary">
+         <div className="font" style={{fontSize: "20px", color: "black"}}>December/2023</div> 
+        </TimelineOppositeContent>
+          <TimelineSeparator>
+          <TimelineDot />
+          <TimelineConnector/>
+        </TimelineSeparator>
+        <TimelineContent mt={{sm:3}}>
+        <Box display={{xs: "block", sm: "none"}}>
+        <div className="font" style={{fontSize: "20px", color: "black",}}>December/2023</div>
+        </Box>
+        <ExperienceBox
+              company={experiences[1].title}
+              role={experiences[1].role}
+              description={experiences[1].description}
+            />
+          </TimelineContent>
+          </TimelineItem>
+        </Timeline>
+     
+        {/* <Stack
+          direction={"column"}
+          spacing={5}
+          alignItems={"center"}
+          justifyContent={"center"}
+        > */}
+      
+          {/* <Stack
             alignItems={"center"}
             direction={"row"}
             justifyContent={"space-around"}
           >
-            {/* <div style={{fontSize: "20px"}}>December/2023</div> */}
+      
+           
+          </Stack> */}
+
+          {/* <Stack
+            alignItems={"center"}
+            direction={"row"}
+            justifyContent={"space-around"}
+          >
+          
             <ExperienceBox
               company={experiences[1].title}
               role={experiences[1].role}
               description={experiences[1].description}
             />
-          </Stack>
-          <h3 className="" style={{ fontSize: "32px" }}>
+          </Stack> */}
+          {/* <h3 className="" style={{ fontSize: "32px" }}>
             Present
-          </h3>
-        </Stack>
+          </h3> */}
+        {/* </Stack> */}
       </Container>
     </div>
   );
