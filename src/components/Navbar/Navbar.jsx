@@ -217,7 +217,7 @@ const Navbar = () => {
                 Resume
               </h3>
             </Button>
-            <Button
+            {/* <Button
              onClick={() => {
               window.open('https://drive.google.com/file/d/1mP6UBs9uqwdmHjNDS55bUxiyhK7F22mr/view?usp=sharing', '_blank');
             }}
@@ -237,7 +237,7 @@ const Navbar = () => {
               >
                 Transcript
               </h3>
-            </Button>
+            </Button> */}
           </Stack>
         </Stack>
       </Box>
