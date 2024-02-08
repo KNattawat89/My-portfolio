@@ -27,7 +27,7 @@ export const Detail = () => {
         "Node.js",
         "ProgreSql",
       ],
-      github: "https://github.com/CSSIT22/studentlife",
+      github: ["https://github.com/CSSIT22/studentlife"],
       responsibilties: [
         "Work as team leader of restaurant feature",
         "Collaborated with 60+ students.",
@@ -45,7 +45,7 @@ export const Detail = () => {
       description:
         "The mobile application that serves various dormitory services for KMUTT's students.",
       techStack: ["Flutter", "Dart", "Golang", "Go-fiber", "MySQL", "Azure"],
-      github: "https://github.com/KNattawat89/ModDormy",
+      github: ["https://github.com/KNattawat89/ModDormy","https://github.com/KNattawat89/Moddormy_backend"],
       responsibilties: [
         "Work as technical leader",
         "Developed frontend of mobile application by using Flutter",
@@ -62,7 +62,7 @@ export const Detail = () => {
         "The Thai Sign Language Detection that use YOLOv8 model for building the AI.",
 
       techStack: ["Python", "YoloV8", "Roboflow"],
-      github: "",
+      github: [],
       responsibilties: [
         "Designed system workflow",
         "Developed and trained Thai Sign Language Detection by using YoloV8",
@@ -77,7 +77,7 @@ export const Detail = () => {
         "The mobile application that serve a donating service for convenient.",
 
       techStack: ["Flutter", "Dart", "Golang", "Go-fiber", "MySQL", "Azure"],
-      github: "https://github.com/nichakontae/gift2grow",
+      github: ["https://github.com/nichakontae/gift2grow", "https://github.com/nichakontae/gift2grow_backend"],
       responsibilties: [
         "Work as technical leader",
         "Developed frontend of mobile application by using Flutter",
@@ -93,7 +93,7 @@ export const Detail = () => {
       description:
         "My portfolio website that show the detail about my projects, skills, and experiences",
       techStack: ["React.js", "Javascript", "MUI"],
-      github: "https://github.com/KNattawat89/My-portfolio",
+      github: ["https://github.com/KNattawat89/My-portfolio"],
       responsibilties: [
         "Designed responsive website UX-UI",
         "Developed frontend using React.js."
@@ -203,13 +203,54 @@ export const Detail = () => {
                         );
                       })}
                     </Grid>
-                    {a.github === "" ? (
+                    {a.github.length === 0 ? (
                       ""
-                    ) : (
+                    ) : a.github.length > 1 ? <Stack direction={"row"}>
+<Button
+                        sx={{ m: 0, textTransform: "none", width: "200px" }}
+                        onClick={() => {
+                          window.open(a.github[0]);
+                        }}
+                      >
+                        <Box
+                          maxWidth={"175px"}
+                          bgcolor={"black"}
+                          color={"white"}
+                          display={"flex"}
+                          px={"10px"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                          height={"35px"}
+                          borderRadius={"16px"}
+                        >
+                          <h4 className="font">Frontend GitHub</h4>
+                        </Box>
+                      </Button>
+                      <Button
+                        sx={{ m: 0, textTransform: "none", width: "200px" }}
+                        onClick={() => {
+                          window.open(a.github[1]);
+                        }}
+                      >
+                        <Box
+                          maxWidth={"175px"}
+                          bgcolor={"black"}
+                          color={"white"}
+                          display={"flex"}
+                          px={"10px"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                          height={"35px"}
+                          borderRadius={"16px"}
+                        >
+                          <h4 className="font">Backend Github</h4>
+                        </Box>
+                      </Button>
+                    </Stack> : (
                       <Button
                         sx={{ m: 0, textTransform: "none", width: "100px" }}
                         onClick={() => {
-                          window.open(a.github);
+                          window.open(a.github[0]);
                         }}
                       >
                         <Box
