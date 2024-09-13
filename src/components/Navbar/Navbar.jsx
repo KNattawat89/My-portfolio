@@ -198,7 +198,7 @@ const Navbar = () => {
           >
             <Button
              onClick={() => {
-              window.open('https://drive.google.com/file/d/1VP7TqBubYC0mt_rXrNIPBEqhsMn9miHU/view?usp=share_link', '_blank');
+              window.open('https://drive.google.com/file/d/1qMLGMtapEzgrMZxoL5Efs8uPf0kZ9Qi4/view?usp=share_link', '_blank');
             }}
               style={{
                 backgroundColor: "#D9D9D9",
